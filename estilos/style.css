@@ -1,0 +1,87 @@
+body{
+    font-family: 'Itim', cursive;
+    background-size: cover;
+}   
+
+.titulo{
+    text-align: center;
+    color: white;
+
+}
+
+.principal{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.contenedor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+}
+.input{
+    width: 800px;
+    min-height: 50px;
+    border-radius: 10px;
+    font-size: x-large;
+    text-align: center;
+    
+}
+.boton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(90deg, rgb(1, 29, 13) 0%, rgb(114, 88, 3) 35%, rgb(206, 169, 6) 100%);
+    color: white;
+    font-size: large;
+    font-weight: 700;
+    width: 100px;
+    height: 50px;
+    margin: 10px;
+}
+
+.resultado{
+    width: 800px;
+    min-height: 50px;
+    border-radius: 10px;
+    font-size: x-large;
+    text-align: center;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 50,
+  'wght' 1000,
+  'GRAD' 50,
+  'opsz' 100;
+  cursor: pointer;
+  color: white; 
+}
+
+.mensaje{
+    color: white;
+    opacity: 0;
+    font-size: 20px;
+    font-weight: 900;
+    transition: all 1s ease;
+}
+
+.mensaje.activo{
+ opacity: 1;
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+  }
