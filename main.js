@@ -11,10 +11,6 @@ enviar.addEventListener("click", function(){
     document.getElementById("resultado").value = resultado;
 })
 
-
-
-
-
 button.addEventListener("click", function(){
     document.querySelector(".resultado").focus();
     document.execCommand("selectAll");
