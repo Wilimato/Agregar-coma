@@ -8,7 +8,7 @@ let input = document.querySelector("input");
 
 
 function getOutput (){
-    let input = document.querySelector("input").value;
+    let input = document.querySelector(".input").value;
     let resultado = input.replaceAll(" ", ", ");
     document.getElementById("resultado").value = resultado;
 }
