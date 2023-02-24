@@ -5,7 +5,17 @@ let mensaje = document.getElementById("offMensaje");
 let input = document.querySelector("input");
 
 
-
+function noEnter($id){
+    $textarea = document.getElementById($id);
+    niveles = -1;
+     
+    if(event.which != null) { // Navegadores compatibles con Mozilla
+        if(event.which == 13){
+            if(navigator.appName == "Opera") niveles = -2;
+            $textarea.value = $textarea.value.slice(0, niveles);
+        }
+ }
+}
 
 function getOutput (){
     let input = document.querySelector(".input").value;
@@ -27,7 +37,8 @@ enviar.addEventListener("click", getOutput);
 button.addEventListener("click", copy);
 
 document.addEventListener("keyup", function(event) {
-    if (event.keyCode === 13) {
+    if (event.keyCode == 13) {
+        noEnter("input");
         getOutput();
     } else if (event.keyCode === 67) {
         copy();
