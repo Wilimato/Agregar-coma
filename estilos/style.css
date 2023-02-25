@@ -47,6 +47,16 @@ body{
     width: 100px;
     height: 50px;
     margin: 10px;
+    cursor: pointer;
+}
+
+@keyframes latidos {
+    from { filter: drop-shadow(0 0 0px rgb(114, 88, 3)) drop-shadow(0 0 0px rgb(114, 88, 3)) drop-shadow(0 0 0px rgb(114, 88, 3))}
+    50% { filter: drop-shadow(0 0 5px rgb(114, 88, 3)) drop-shadow(0 0 8px rgb(114, 88, 3)) drop-shadow(0 0 17px rgb(114, 88, 3)) }
+    to { filter: drop-shadow(0 0 0px rgb(114, 88, 3)) drop-shadow(0 0 0px rgb(114, 88, 3)) drop-shadow(0 0 0px rgb(114, 88, 3))} }
+
+.boton:hover{
+    animation: latidos 1s infinite;
 }
 
 .resultado{
