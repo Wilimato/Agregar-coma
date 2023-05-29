@@ -1,15 +1,44 @@
-body{
+body {
     font-family: 'Itim', cursive;
     background-size: cover;
-}   
+}
 
-.titulo{
+@keyframes latidos {
+    from {
+        filter: drop-shadow(0 0 0px rgb(114, 88, 3)) drop-shadow(0 0 0px rgb(114, 88, 3)) drop-shadow(0 0 0px rgb(114, 88, 3))
+    }
+
+    50% {
+        filter: drop-shadow(0 0 5px rgb(114, 88, 3)) drop-shadow(0 0 8px rgb(114, 88, 3)) drop-shadow(0 0 17px rgb(114, 88, 3))
+    }
+
+    to {
+        filter: drop-shadow(0 0 0px rgb(114, 88, 3)) drop-shadow(0 0 0px rgb(114, 88, 3)) drop-shadow(0 0 0px rgb(114, 88, 3))
+    }
+}
+
+@keyframes latidosBlue {
+    from {
+        filter: drop-shadow(0 0 0px rgb(3, 64, 114)) drop-shadow(0 0 0px rgb(3, 20, 114)) drop-shadow(0 0 0px rgb(3, 5, 114))
+    }
+
+    50% {
+        filter: drop-shadow(0 0 2px rgb(3, 64, 114)) drop-shadow(0 0 5px rgb(3, 20, 114)) drop-shadow(0 0 10px rgb(3, 5, 114))
+    }
+
+    to {
+        filter: drop-shadow(0 0 0px rgb(3, 64, 114)) drop-shadow(0 0 0px rgb(3, 20, 114)) drop-shadow(0 0 0px rgb(3, 5, 114))
+    }
+}
+
+
+.titulo {
     text-align: center;
     color: white;
 
 }
 
-.principal{
+.principal {
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -18,23 +47,30 @@ body{
     align-items: center;
     justify-content: center;
 }
-.contenedor{
+
+.contenedor {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
 
 }
-.input{
+
+.input {
     margin: 10px;
     width: 800px;
     min-height: 50px;
     border-radius: 10px;
     font-size: x-large;
     text-align: center;
-    
+
 }
-.boton{
+
+.input:focus {
+    animation: latidosBlue 1s infinite;
+}
+
+.boton {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -50,16 +86,11 @@ body{
     cursor: pointer;
 }
 
-@keyframes latidos {
-    from { filter: drop-shadow(0 0 0px rgb(114, 88, 3)) drop-shadow(0 0 0px rgb(114, 88, 3)) drop-shadow(0 0 0px rgb(114, 88, 3))}
-    50% { filter: drop-shadow(0 0 5px rgb(114, 88, 3)) drop-shadow(0 0 8px rgb(114, 88, 3)) drop-shadow(0 0 17px rgb(114, 88, 3)) }
-    to { filter: drop-shadow(0 0 0px rgb(114, 88, 3)) drop-shadow(0 0 0px rgb(114, 88, 3)) drop-shadow(0 0 0px rgb(114, 88, 3))} }
-
-.boton:hover{
+.boton:hover {
     animation: latidos 1s infinite;
 }
 
-.resultado{
+.resultado {
     margin: 10px;
     width: 800px;
     min-height: 50px;
@@ -68,17 +99,21 @@ body{
     text-align: center;
 }
 
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 50,
-  'wght' 1000,
-  'GRAD' 50,
-  'opsz' 100;
-  cursor: pointer;
-  color: white; 
+.resultado:focus {
+    animation: latidosBlue 1s infinite;
 }
 
-.mensaje{
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 50,
+        'wght' 1000,
+        'GRAD' 50,
+        'opsz' 100;
+    cursor: pointer;
+    color: white;
+}
+
+.mensaje {
     color: white;
     opacity: 0;
     font-size: 20px;
@@ -86,8 +121,8 @@ body{
     transition: all 1s ease;
 }
 
-.mensaje.activo{
- opacity: 1;
+.mensaje.activo {
+    opacity: 1;
 }
 
 #myVideo {
@@ -96,4 +131,8 @@ body{
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
-  }
+}
+
+input {
+    font-family: 'Itim', cursive;
+}

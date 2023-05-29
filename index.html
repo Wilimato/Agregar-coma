@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="imagenes/pencil-1.png">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;400;500;600;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="estilos/style.css">
     <title>Agregar Coma</title>
 </head>
@@ -20,15 +20,17 @@
     </video>
     <div class="principal">
         <h1 class="titulo">Agregar Coma</h1>
-            <div class="contenedor">
-                <textarea rows="5" onkeydown="pulsar(event)" placeholder="Escriba o pegue el título aquí" class="input" type="text" id="input"></textarea>
-                <input class="boton" type="button" value="Enviar" id="submit">
-            </div>
         <div class="contenedor">
-            <textarea rows="5" Placeholder="El resultado se mostrará aquí" class="resultado" value="" id="resultado"></textarea>
+            <textarea rows="5" onkeydown="pulsar(event)" placeholder="Escriba o pegue el título aquí" class="input"
+                type="text" id="input"></textarea>
+            <input class="boton" type="button" value="Enviar" id="submit">
+        </div>
+        <div class="contenedor">
+            <textarea rows="5" Placeholder="El resultado se mostrará aquí" class="resultado" value=""
+                id="resultado"></textarea>
             <div class="boton copy">
                 <span class="material-symbols-outlined copy">
-                    content_copy
+                    Copiar
                 </span>
             </div>
         </div>
@@ -36,4 +38,5 @@
     </div>
     <script src="main.js"></script>
 </body>
+
 </html>
