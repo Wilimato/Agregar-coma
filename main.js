@@ -15,9 +15,28 @@ function pulsar(e) {
 
 
 //Remplazar espacio por coma 
+// function getOutput() {
+//     let input = document.querySelector(".input").value;
+//     let resultado = input.replaceAll(/[ \n]+/g, ", ");
+//     document.getElementById("resultado").value = resultado;
+// }
+
 function getOutput() {
     let input = document.querySelector(".input").value;
-    let resultado = input.replaceAll(/[ \n]+/g, ", ");
+    let opcionSeleccionada = document.getElementById("opciones").value;
+
+    let resultado;
+
+    if (opcionSeleccionada === "solo espacio") {
+        resultado = input.replace(/ /g, ', ');
+    } else if (opcionSeleccionada === "solo salto de linea") {
+        resultado = input.replace(/\n/g, ', ');
+    } else if (opcionSeleccionada === "los dos") {
+        resultado = input.replace(/[ \n]+/g, ', ');
+    } else {
+        resultado = input; // Otra opción, no se hace ningún reemplazo.
+    }
+
     document.getElementById("resultado").value = resultado;
 }
 

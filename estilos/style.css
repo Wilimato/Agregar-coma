@@ -136,3 +136,24 @@ body {
 input {
     font-family: 'Itim', cursive;
 }
+
+.opciones {
+    color: white;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.contain-opciones {
+    display: flex;
+    margin: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+#opciones {
+    font-size: 15px;
+    font-weight: 600;
+    padding: 5px;
+    margin-left: 5px;
+    border-radius: 5px;
+}
